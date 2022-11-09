@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+}
+body{
+   font-family: 'PT Sans', sans-serif;
+   background-color: gold;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 100vh;
+}
+.container{
+   width: 270px;
+   height:auto;
+   background-color: white;
+   padding-top: 15px;
+   border-radius: 7px;
+}
+.container input{
+   display: none;
+}
+.container .outer{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   height: 115px;
+   overflow: hidden;
+}
+.container .emojis{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   transition: 0.2s ease;
+   /*top: -110%;*/
+   /*top: -215%;*/
+   /*top: -325%;*/
+   /*top: -430%;*/
+   /*top: -538%;*/
+}
+.container .emojis li{
+}
+.container .emojis img{
+   width: 100px;
+   border-radius: 50%;
+   margin: 10px 0;
+}
+
+/* changing the emojis on clicking the stars */
+
+#star-1:checked ~ .outer .emojis{
+   top: -110%;
+} 
+#star-2:checked ~ .outer .emojis{
+   top: -215%;
+} 
+#star-3:checked ~ .outer .emojis{
+   top: -325%;
+} 
+#star-4:checked ~ .outer .emojis{
+   top: -430%;
+} 
+#star-5:checked ~ .outer .emojis{
+   top: -538%;
+} 
+
+
+
+.container .rating{
+   text-align: center;
+   padding: 15px 0;
+   
+}
+.container .rating label{
+   font-size: 25px;
+   margin: 0 2px;
+   color: #ccc;
+}
+
+
+#star-1:hover ~ .rating .star-1,
+#star-1:checked ~ .rating .star-1,
+
+#star-2:hover ~ .rating .star-1,
+#star-2:hover ~ .rating .star-2,
+#star-2:checked ~ .rating .star-1,
+#star-2:checked ~ .rating .star-2,
+
+#star-3:hover ~ .rating .star-1,
+#star-3:hover ~ .rating .star-2,
+#star-3:hover ~ .rating .star-3,
+#star-3:checked ~ .rating .star-1,
+#star-3:checked ~ .rating .star-2,
+#star-3:checked ~ .rating .star-3,
+
+#star-4:hover ~ .rating .star-1,
+#star-4:hover ~ .rating .star-2,
+#star-4:hover ~ .rating .star-3,
+#star-4:hover ~ .rating .star-4,
+#star-4:checked ~ .rating .star-1,
+#star-4:checked ~ .rating .star-2,
+#star-4:checked ~ .rating .star-3,
+#star-4:checked ~ .rating .star-4,
+
+#star-5:hover ~ .rating .star-1,
+#star-5:hover ~ .rating .star-2,
+#star-5:hover ~ .rating .star-3,
+#star-5:hover ~ .rating .star-4,
+#star-5:hover ~ .rating .star-5,
+#star-5:checked ~ .rating .star-1,
+#star-5:checked ~ .rating .star-2,
+#star-5:checked ~ .rating .star-3,
+#star-5:checked ~ .rating .star-4,
+#star-5:checked ~ .rating .star-5
+{
+   color: gold;
+}
+
+.description{
+   display: flex;
+   justify-content: space-between;
+   border-top: 1px solid black;
+   padding: 15px 10px;
+   background-color: #ccc;
+   border-radius: 0 0 7px 7px;
+}
+.description span{
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.description .text::before{
+   content: "Rate your experience"
+}
+.description .numb::before{
+   content: "0 out of 5"
+}
+
+#star-1:checked ~ .description .text::before{
+   content: "i just hate it";
+}
+#star-1:checked ~ .description .numb::before{
+   content: "1 out of 5";
+}
+
+#star-2:checked ~ .description .text::before{
+   content: "i don't like it";
+}
+#star-2:checked ~ .description .numb::before{
+   content: "2 out of 5";
+}
+
+#star-3:checked ~ .description .text::before{
+   content: "i like it";
+}
+#star-3:checked ~ .description .numb::before{
+   content: "3 out of 5";
+}
+
+#star-4:checked ~ .description .text::before{
+   content: "it is awesome";
+}
+#star-4:checked ~ .description .numb::before{
+   content: "4 out of 5";
+}
+
+#star-5:checked ~ .description .text::before{
+   content: "i love it";
+}
+#star-5:checked ~ .description .numb::before{
+   content: "5 out of 5";
+}
