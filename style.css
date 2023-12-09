@@ -123,9 +123,8 @@ body{
 .description{
    display: flex;
    justify-content: space-between;
-   border-top: 1px solid black;
    padding: 15px 10px;
-   background-color: #ccc;
+   background-color: #F1F1F1;
    border-radius: 0 0 7px 7px;
 }
 .description span{
